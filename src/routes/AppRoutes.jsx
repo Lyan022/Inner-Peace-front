@@ -27,6 +27,7 @@ import { NotFound } from '../pages/NotFound';
 import { Solicitacoes } from '../pages/Solicitacoes';
 import { Pacientes } from '../pages/Pacientes';
 import { PacienteDetalhes } from '../pages/PacienteDetalhe';
+import { SessaoDetalhes } from '../pages/SessaoDetalhes';
 
 /* ==============================
    Componente de rota protegida
@@ -148,9 +149,14 @@ export const AppRoutes = () => {
             <Pacientes />
           </ProtectedRoute>
         } />
-         <Route path="/pacientes/:id" element={
+        <Route path="/pacientes/:id" element={
           <ProtectedRoute>
             <PacienteDetalhes />
+          </ProtectedRoute>
+        } />
+        <Route path="/sessao/:sessionId" element={
+          <ProtectedRoute>
+            <SessaoDetalhes />
           </ProtectedRoute>
         } />
 
