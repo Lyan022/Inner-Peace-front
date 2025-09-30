@@ -178,12 +178,12 @@ export const Agendamento = () => {
         {/* SEMÂNTICA: h1 indica o título mais importante da página */}
         {/* ESTILO: text-3xl (30px), font-bold (700), text-dark (cor customizada) */}
         {/* ESPAÇAMENTO: mb-2 (margin-bottom 0.5rem) */}
-        <h1 className="text-3xl font-bold text-dark mb-2">Solicitar ser Paciente</h1>
+        <h1 className="text-3xl font-bold text-black mb-2">Solicitar ser Paciente</h1>
         
         {/* SUBTÍTULO EXPLICATIVO */}
         {/* CONTRASTE: text-dark/70 = cor escura com 70% de opacidade */}
         {/* PORQUE: Hierarquia visual - menos importante que o título */}
-        <p className="text-dark/70">Escolha um psicólogo e descreva sua necessidade de atendimento</p>
+        <p className="text-black">Escolha um psicólogo e descreva sua necessidade de atendimento</p>
       </div>
 
       {/* ===== CARD PRINCIPAL COM FORMULÁRIO ===== */}
@@ -203,7 +203,7 @@ export const Agendamento = () => {
             {/* LAYOUT: flex items-center = alinha ícone e texto horizontalmente */}
             {/* ESPAÇAMENTO: gap-2 = 0.5rem entre ícone e texto */}
             {/* TIPOGRAFIA: text-lg (18px), font-medium (500) */}
-            <label className="flex items-center gap-2 text-lg font-medium text-dark mb-3">
+            <label className="flex items-center gap-2 text-lg font-medium text-black mb-3">
               {/* ÍCONE DECORATIVO */}
               {/* TAMANHO: w-5 h-5 = 20x20px */}
               {/* PORQUE: Melhora identificação visual do campo */}
@@ -241,7 +241,7 @@ export const Agendamento = () => {
             {/* LABEL COM INDICADOR DE OBRIGATÓRIO */}
             {/* ASTERISCO: Convenção universal para campos obrigatórios */}
             {/* PORQUE: Usuário sabe quais campos deve preencher */}
-            <label className="block text-lg font-medium text-dark mb-3">
+            <label className="block text-lg font-medium text-black mb-3">
               Descreva sua necessidade *
             </label>
             
@@ -263,7 +263,7 @@ export const Agendamento = () => {
           <div>
             {/* LABEL SIMPLES */}
             {/* SEM ASTERISCO: Campo opcional, tem valor padrão */}
-            <label className="block text-lg font-medium text-dark mb-3">
+            <label className="block text-lg font-medium text-black mb-3">
               Nível de Urgência
             </label>
             
@@ -291,9 +291,9 @@ export const Agendamento = () => {
           {selectedPsychologist && (
             <Card className="bg-blue-50"> {/* Card aninhado com fundo azul claro */}
               {/* TÍTULO DA SEÇÃO */}
-              <h3 className="font-semibold text-dark mb-2">Informações Importantes</h3>
+              <h3 className="font-semibold text-black mb-2">Informações Importantes</h3>
               
-              <div className="space-y-2 text-sm text-dark/70">
+              <div className="space-y-2 text-sm text-black">
                 {/* BUSCA DINÂMICA DE DADOS */}
                 {/* FIND: procura psicólogo na lista pelo ID */}
                 {/* PARSEINT: converte string do select para número */}

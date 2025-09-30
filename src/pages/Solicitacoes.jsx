@@ -88,19 +88,19 @@ export const Solicitacoes = () => {
 
   const getUrgencyColor = (urgency) => {
     switch (urgency) {
-      case 'alta': return 'bg-red-100 text-red-800';
-      case 'media': return 'bg-yellow-100 text-yellow-800';
-      case 'baixa': return 'bg-green-100 text-green-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'alta': return 'bg-red-100 text-red-700';
+      case 'media': return 'bg-yellow-100 text-yellow-700';
+      case 'baixa': return 'bg-green-100 text-green-700';
+      default: return 'bg-gray-100 text-gray-700';
     }
   };
 
   const getStatusColor = (status) => {
     switch (status) {
-      case 'aceito': return 'bg-green-100 text-green-800';
-      case 'rejeitado': return 'bg-red-100 text-red-800';
-      case 'pendente': return 'bg-blue-100 text-blue-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'aceito': return 'bg-green-100 text-green-700';
+      case 'rejeitado': return 'bg-red-100 text-red-700';
+      case 'pendente': return 'bg-blue-100 text-blue-700';
+      default: return 'bg-gray-100 text-gray-700';
     }
   };
 
@@ -109,29 +109,29 @@ export const Solicitacoes = () => {
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-3">
-        <Bell className="w-8 h-8 text-light" />
-        <h1 className="text-3xl font-bold text-white">Solicitações de Pacientes</h1>
+        <Bell className="w-8 h-8 text-gray-600" />
+        <h1 className="text-3xl font-bold text-gray-800">Solicitações de Pacientes</h1>
       </div>
 
       <div className="grid gap-6">
         {requests.length === 0 ? (
-          <Card className="text-center py-12">
-            <Bell className="w-16 h-16 text-dark/30 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-dark mb-2">Nenhuma solicitação encontrada</h3>
-            <p className="text-dark/70">As solicitações de novos pacientes aparecerão aqui.</p>
+          <Card className="text-center py-12 bg-gray-100">
+            <Bell className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-gray-700 mb-2">Nenhuma solicitação encontrada</h3>
+            <p className="text-gray-500">As solicitações de novos pacientes aparecerão aqui.</p>
           </Card>
         ) : (
           requests.map(request => (
-            <Card key={request.id} className="space-y-4">
+            <Card key={request.id} className="space-y-4 bg-white shadow-sm">
               <div className="flex justify-between items-start">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-light to-accent rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-200 to-blue-400 rounded-full flex items-center justify-center">
                     <User className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-dark">{request.patientName}</h3>
-                    <p className="text-sm text-dark/60">{request.patientEmail}</p>
-                    <p className="text-sm text-dark/60">{request.patientPhone}</p>
+                    <h3 className="text-lg font-semibold text-gray-800">{request.patientName}</h3>
+                    <p className="text-sm text-gray-600">{request.patientEmail}</p>
+                    <p className="text-sm text-gray-600">{request.patientPhone}</p>
                   </div>
                 </div>
                 <div className="flex gap-2">
@@ -145,11 +145,11 @@ export const Solicitacoes = () => {
               </div>
 
               <div className="bg-gray-50 rounded-lg p-4">
-                <h4 className="font-medium text-dark mb-2">Descrição da necessidade:</h4>
-                <p className="text-dark/70">{request.description}</p>
+                <h4 className="font-medium text-gray-700 mb-2">Descrição da necessidade:</h4>
+                <p className="text-gray-600">{request.description}</p>
               </div>
 
-              <div className="flex items-center gap-4 text-sm text-dark/60">
+              <div className="flex items-center gap-4 text-sm text-gray-500">
                 <div className="flex items-center gap-1">
                   <Clock className="w-4 h-4" />
                   Enviado em {new Date(request.createdAt).toLocaleDateString('pt-BR')}
@@ -165,31 +165,27 @@ export const Solicitacoes = () => {
               )}
 
               {/* Botões */}
-              {/* Botões */}
-              {/* Botões */}
               <div className="flex justify-between items-center">
-                {/* Rejeitar estilizado */}
+                {/* Rejeitar */}
                 <Button
                   variant="ghost"
                   onClick={() => handleRejectRequest(request.id)}
                   loading={processingRequests.has(request.id)}
-                  className="flex items-center justify-center p-2 rounded-lg bg-orange-600 hover:bg-orange-700 text-white"
+                  className="flex items-center justify-center p-2 rounded-lg bg-red-200 hover:bg-red-300 text-red-800"
                 >
                   <X className="w-5 h-5" />
                 </Button>
 
-                {/* Aceitar destacado */}
+                {/* Aceitar */}
                 <Button
                   onClick={() => handleAcceptRequest(request.id, request)}
                   loading={processingRequests.has(request.id)}
-                  className="flex-1 flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white py-3 px-6 rounded-lg font-semibold"
+                  className="flex-1 flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg font-semibold"
                 >
                   <CheckCircle className="w-5 h-5" />
                   Aceitar como Paciente
                 </Button>
               </div>
-
-
             </Card>
           ))
         )}

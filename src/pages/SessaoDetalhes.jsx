@@ -5,7 +5,7 @@ import { mockApi } from '../services/mockApi';
 import { Card } from '../components/Card';
 import { Button } from '../components/Button';
 import { LoadingSpinner } from '../components/LoadingSpinner';
-import { ArrowLeft, Clock, Calendar, Use, FileText, Edit3, Save, X } from 'lucide-react';
+import { ArrowLeft, Clock, Calendar, User, FileText, Edit3, Save, X } from 'lucide-react';
 
 export const SessaoDetalhes = () => {
     const { sessionId } = useParams();
@@ -28,7 +28,7 @@ export const SessaoDetalhes = () => {
                 setEditReport(sessionData.fullReport || '');
                 setEditStatus(sessionData.status);
                 const patients = await mockApi.getPatients(user.id);
-                const patientData = patients.find(p => p.id === sessionData.sessionData.patientId);
+                const patientData = patients.find(p => p.id === sessionData.patientId);
                 setPatient(patientData);
             } catch (error) {
                 console.error('Error ao carregar dados da sessão', error)
@@ -63,7 +63,7 @@ export const SessaoDetalhes = () => {
     if (loading) return <LoadingSpinner size='lg' />
     if (!session || !patient) return null;
 
-    const statusOption = [
+    const statusOptions = [
         { value: 'agendado', label: 'Agendado', color: 'bg-blue-100 text-dark' },
         { value: 'iniciado', label: 'Iniciado', color: 'bg-yellow-100 text-yellow-800' },
         { value: 'cocluido', label: 'Concluído', color: 'bg-green-100 text-green-800' },

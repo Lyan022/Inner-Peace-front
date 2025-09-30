@@ -41,7 +41,7 @@ export const Home = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-white ">
-      
+
       {/* ===== Faixa marrom no topo (sem título) ===== */}
       <div className="bg-[#8B4513] py-4"></div>
 
@@ -58,20 +58,20 @@ export const Home = () => {
               A psicologia é o caminho sereno de compreender a mente e reencontrar o equilíbrio interior.
             </p>
             <Link to="/register">
-              <Button size="lg" className="mt-4 bg-[#b1612e] hover:bg-[#944f25] text-white px-8 py-4 rounded-xl text-lg font-semibold">
+              <Button size="lg" className="mt-4 bg-[#B1612E] hover:bg-[#B1612E] text-white px-8 py-4 rounded-xl text-lg font-semibold">
                 Entrar
               </Button>
             </Link>
           </div>
-
           {/* Imagem da direita */}
-          <div className="flex justify-center md:justify-end w-full h-full object-cover">
+          <div className="flex justify-center md:justify-end w-full h-full">
             <img
               src="/imagem.png"
               alt="Sessão de psicologia"
-              className="w-full h-full object-cover rounded-3xl shadow-2xl"
+              className="w-[90%] md:w-[600px] lg:w-[750px] h-auto object-cover rounded-3xl shadow-2xl transition-transform duration-500 hover:scale-105"
             />
           </div>
+
         </div>
       </section>
 
@@ -85,10 +85,10 @@ export const Home = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6">
                 Tecnologia a Serviço do Cuidado
               </h2>
-              <p className="text-xl text-white max-w-3xl mx-auto">
+              <p className="text-xl text-dark max-w-3xl mx-auto">
                 Ferramentas inteligentes para organizar, acompanhar e potencializar atendimentos voluntários
               </p>
             </motion.div>
@@ -105,10 +105,10 @@ export const Home = () => {
                 className="text-center"
               >
                 <div className="w-20 h-20 bg-gradient-to-br rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
-                  <feature.icon className="w-10 h-10 text-white" />
+                  <feature.icon className="w-10 h-10 text-dark" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-white leading-relaxed">{feature.description}</p>
+                <h3 className="text-xl font-bold text-dark mb-4">{feature.title}</h3>
+                <p className="text-black leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -124,10 +124,10 @@ export const Home = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-dark mb-8">
               Faça Parte desta Transformação Social
             </h2>
-            <p className="text-xl text-white mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-dark mb-12 max-w-3xl mx-auto leading-relaxed">
               Una tecnologia e responsabilidade social. Ajude a democratizar o acesso
               à saúde mental através de uma plataforma pensada para o bem-estar coletivo.
             </p>
