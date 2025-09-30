@@ -1,0 +1,296 @@
+Inner Peace - Sistema de Agendamento Psicológico Online
+
+Sistema web moderno para atendimentos psicológicos online, desenvolvido com HTML, Tailwind CSS e React, com foco em boas práticas de site, acessibilidade e responsividade.
+
+Inner Peace busca facilitar a conexão entre psicólogos e pacientes de forma simples, segura e eficiente.
+
+Índice
+
+Sobre o Projeto
+
+Funcionalidades
+
+Tecnologias
+
+Instalação
+
+Uso
+
+Estrutura do Projeto
+
+Modelo de Dados
+
+Componentes
+
+Rotas
+
+Design System
+
+Contribuição
+
+Licença
+
+Equipe
+
+ Sobre o Projeto
+
+O Inner Peace é uma plataforma web para facilitar atendimentos psicológicos online, oferecendo dashboards distintos para psicólogos e pacientes, com foco em uma interface moderna, responsiva e acessível.
+
+Objetivos:
+
+Simplificar agendamentos de consultas online
+
+Facilitar gestão de pacientes para psicólogos
+
+Manter histórico completo de sessões
+
+Garantir interface moderna e responsiva
+
+ Funcionalidades
+ Para Psicólogos
+
+Dashboard Personalizado: KPIs e próximos agendamentos
+
+Gestão de Pacientes: Lista completa com histórico e detalhes
+
+Gestão de Sessões: Atualização de status, notas e relatórios
+
+Chat com IA: Assistente especializada em psicologia clínica
+
+Relatórios e Analytics: Gráficos de frequência, status e alertas de risco
+
+Agenda Individual: Controle de disponibilidade
+
+👤 Para Pacientes
+
+Dashboard Simples: Próximos agendamentos e informações importantes
+
+Agendamento Flexível: Escolha de psicólogo, data e horário
+
+Seleção de Especialista: Lista de psicólogos com especialidades
+
+Verificação de Disponibilidade: Horários livres em tempo real
+
+ Sistema de Autenticação
+
+Login seguro com validação
+
+Diferenciação automática de perfis (psicólogo/paciente)
+
+Registro de novos usuários
+
+Proteção de rotas por perfil
+
+ Tecnologias
+
+Frontend:
+
+HTML5 & Tailwind CSS
+
+React + Vite
+
+Lucide React (ícones)
+
+Framer Motion (animações)
+
+Outros recursos:
+
+Design System com cores consistentes
+
+Componentes reutilizáveis
+
+Layout responsivo mobile-first
+
+Instalação
+
+Pré-requisitos:
+
+Node.js 18+
+
+npm ou yarn
+
+Passos:
+
+git clone https://github.com/seu-usuario/inner-peace.git
+cd inner-peace
+npm install # ou yarn install
+npm run dev # ou yarn dev
+
+
+Acesse o sistema em http://localhost:5173
+
+💻 Uso
+
+Contas de Teste:
+
+Psicólogos:
+
+Dr. João Silva: psicologo@test.com
+ / 123456
+
+Dra. Ana Costa: ana@test.com
+ / 123456
+
+Paciente:
+
+Maria Santos: paciente@test.com
+ / 123456
+
+Fluxo de Uso:
+
+Login com uma conta de teste
+
+Dashboard personalizado por tipo de usuário
+
+Pacientes: agendamento de consultas
+
+Psicólogos: gestão de pacientes, sessões e relatórios
+
+ Estrutura do Projeto
+src/
+├── components/          # Componentes reutilizáveis
+├── context/             # Contextos React (Auth, Theme, etc.)
+├── pages/               # Páginas da aplicação
+├── routes/              # Configuração de rotas
+├── services/            # APIs e serviços (mock API, IA)
+├── App.jsx              # Componente principal
+├── main.jsx             # Entry point
+└── index.css            # Estilos globais
+
+🗄 Modelo de Dados
+
+Usuário (User)
+
+{
+  "id": 1,
+  "name": "João Silva",
+  "email": "psicologo@test.com",
+  "password": "123456",
+  "type": "psicologo",
+  "specialty": "Clínica",
+  "crp": "12345"
+}
+
+
+Paciente (Patient)
+
+{
+  "id": 1,
+  "name": "Maria Santos",
+  "email": "paciente@test.com",
+  "phone": "11999999999",
+  "birthDate": "1995-05-10",
+  "psychologistId": 1
+}
+
+
+Agendamento (Appointment)
+
+{
+  "id": 1,
+  "patientId": 1,
+  "psychologistId": 1,
+  "date": "2025-10-10",
+  "time": "14:00",
+  "status": "agendado",
+  "description": "Sessão de acompanhamento",
+  "notes": ""
+}
+
+ Componentes
+
+<Button /> - Botão customizado com variantes
+
+<Card /> - Container com efeito glassmorphism
+
+<Modal /> - Modal responsivo com overlay
+
+<Sidebar /> - Navegação lateral adaptativa
+
+<PublicNavbar /> - Navbar pública
+
+<LoadingSpinner /> - Indicador de carregamento
+
+🛣 Rotas
+
+Públicas:
+
+/ - Home
+
+/about - Sobre
+
+/login - Login
+
+/register - Cadastro
+
+Protegidas:
+
+/dashboard - Dashboard (por perfil)
+
+/agendamento - Pacientes
+
+/pacientes - Psicólogos
+
+/pacientes/:id - Detalhes do paciente
+
+/sessao/:id - Detalhes da sessão
+
+ Design System
+
+Cores principais (tons de marrom):
+
+Escuro: #8B5E3C
+
+Médio: #C19A6B
+
+Claro: #F3EDE8
+
+Accent: #D9A066
+
+Fundo: #F9F6F3
+
+Tipografia:
+
+Primária: Inter
+
+Secundária: Nunito
+
+Monospace: Roboto Mono
+
+Componentes:
+
+Buttons, Cards, Modals com glassmorphism
+
+Layout responsivo e mobile-first
+
+ Contribuição
+
+Fork o projeto
+
+Crie uma branch feature/nova-funcionalidade
+
+Commit suas alterações
+
+Push para sua branch
+
+Abra um Pull Request
+
+Padrões de Código:
+
+ESLint + Prettier
+
+PascalCase para componentes
+
+camelCase para funções
+
+ Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+Equipe
+
+Desenvolvedor Principal: [Seu Nome]
+
+Design: [Nome do Designer]
+
+Consultoria Psicológica: [Nome do Consultor]
