@@ -38,7 +38,7 @@ export const Relatorios = () => {
     <div className="space-y-6">
       <div className="text-center">
         <h1 className="text-3xl font-bold text-dark mb-2">Relatórios e Analytics</h1>
-        <p className="text-dark/70">Acompanhe métricas e indicadores da sua prática</p>
+        <p className="text-white">Acompanhe métricas e indicadores da sua prática</p>
       </div>
 
       {/* Mensagem para psicólogos sem dados */}
@@ -57,25 +57,25 @@ export const Relatorios = () => {
         <>
           {/* KPIs */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <Card className="text-center">
+            <Card className="bg-white text-center">
               <Users className="w-8 h-8 text-light mx-auto mb-2" />
               <h3 className="text-2xl font-bold text-dark">{stats.activePatients}</h3>
               <p className="text-dark/70 text-sm">Pacientes Ativos</p>
             </Card>
 
-            <Card className="text-center">
+            <Card className="bg-white text-center">
               <Calendar className="w-8 h-8 text-accent mx-auto mb-2" />
               <h3 className="text-2xl font-bold text-dark">{stats.totalSessions}</h3>
               <p className="text-dark/70 text-sm">Total de Sessões</p>
             </Card>
 
-            <Card className="text-center">
+            <Card className="bg-white text-center">
               <TrendingUp className="w-8 h-8 text-green-500 mx-auto mb-2" />
               <h3 className="text-2xl font-bold text-dark">{stats.attendanceRate}%</h3>
               <p className="text-dark/70 text-sm">Taxa de Conclusão</p>
             </Card>
 
-            <Card className="text-center">
+            <Card className="bg-white text-center">
               <AlertTriangle className="w-8 h-8 text-black mx-auto mb-2" />
               <h3 className="text-2xl font-bold text-dark">{stats.riskAlerts}</h3>
               <p className="text-dark/70 text-sm">Alertas de Risco</p>

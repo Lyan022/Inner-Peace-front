@@ -40,15 +40,15 @@ export const Pacientes = () => {
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-3">
-        <Users className="w-8 h-8 text-white" />
-        <h1 className="text-3xl font-bold text-white">
+        <Users className="w-8 h-8 text-[#5A3E36]" />
+        <h1 className="text-3xl font-bold text-[#5A3E36]">
           Meus Pacientes: {patients.length} Pacientes
         </h1>
       </div>
 
       <div className="grid gap-6">
         {patients.length === 0 ? (
-          <Card className="text-center py-12">
+          <Card className="text-center py-12 ">
             <Users className="w-16 h-16 text-dark/30 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-dark mb-2">
               Nenhum paciente encontrado
@@ -62,7 +62,7 @@ export const Pacientes = () => {
             <Card
               key={patient.id}
               onClick={() => navigate(`/pacientes/${patient.id}`)}
-              className="cursor-pointer hover:shadow-lg transition-shadow bg-white"
+              className="cursor-pointer hover:shadow-lg transition-shadow  border-[#C9B5A7] bg-[#F7EFE7]"
             >
               <div className="space-y-3">
                 {/* Cabeçalho */}
@@ -87,8 +87,8 @@ export const Pacientes = () => {
                   <span
                     className={
                       patient.status === "Ativo"
-                        ? "text-green-600 font-semibold"
-                        : "text-blue-600 font-semibold"
+                        ? "text-light font-semibold"
+                        : "text-light font-semibold"
                     }
                   >
                     {patient.status}

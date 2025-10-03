@@ -136,11 +136,11 @@ export const ChatIA = () => {
   return (
 <div className="max-w-4xl mx-auto">
 <div className="mb-8">
-<h1 className="text-3xl font-bold text-dark mb-2">Chat com IA</h1>
+<h1 className="text-3xl font-bold text-[#5A3E36] mb-2">Chat com IA</h1>
 <p className="text-white">Assistente especializada em psicologia para apoiar sua prática clínica</p>
 </div>
  
-      <Card className="h-[600px] flex flex-col">
+      <Card className="bg-white h-[600px] flex flex-col">
 
         {/* Messages Area */}
 <div className="flex-1 overflow-y-auto p-6 space-y-4">
@@ -271,7 +271,7 @@ export const ChatIA = () => {
  
       {/* Quick Actions */}
 <div className="mt-6">
-<h3 className="text-lg font-semibold text-dark mb-3">Perguntas Sugeridas</h3>
+<h3 className="text-lg font-semibold text-white mb-3">Perguntas Sugeridas</h3>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
 
           {[

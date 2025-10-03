@@ -87,11 +87,11 @@ export const DashboardPsicologo = () => {
 
       {isNewPsychologist && (
         <Card className="text-center py-8 border-2 border-dashed border-[#C9B5A7] bg-[#F7EFE7]">
-          <Users className="w-16 h-16 text-white mx-auto mb-4" />
-          <h3 className="text-xl font-semibold text-white mb-2">
+          <Users className="w-16 h-16 text-light mx-auto mb-4" />
+          <h3 className="text-xl font-semibold text-light mb-2">
             Bem-vindo ao Inner Peace!
           </h3>
-          <p className="text-white mb-4">
+          <p className="text-dark mb-4">
             Você é novo por aqui. Seus pacientes e agendamentos aparecerão neste
             dashboard conforme você começar a receber solicitações e agendar
             sessões.

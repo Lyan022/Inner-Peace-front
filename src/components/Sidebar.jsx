@@ -38,35 +38,35 @@ export const Sidebar = () => {
       {/* Botão para abrir/fechar menu em telas pequenas */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="lg:hidden fixed top-4 left-4 z-50 bg-dark text-white p-2 rounded-lg shadow-lg"
+        className="lg:hidden fixed top-4 left-4 z-50 bg-light text-white p-2 rounded-lg shadow-lg"
         aria-label="Menu"
       >
         {isOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
       {/* Sidebar */}
-      <div className={`fixed left-0 top-0 h-full w-64 bg-dark shadow-xl transform transition-transform duration-300 z-40 ${
+      <div className={`fixed left-0 top-0 h-full w-64 border-[#C9B5A7] bg-[#F7EFE7] shadow-xl transform transition-transform duration-300 z-40 ${
         isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
       }`}>
         <div className="flex flex-col h-full">
           {/* Logo */}
-          <div className="flex items-center space-x-3 p-6 border-b border-white/10">
+          <div className="flex items-center space-x-3 p-6 border-b-2 border-light">
             <img src="/logo.png" alt="Lunysse" className="w-10 h-10 rounded-lg" />
             <div>
-              <span className="text-xl font-bold text-white">Lunysse</span>
-              <p className="text-xs text-white/60">Sistema Psicológico</p>
+              <span className="text-xl font-bold text-light">Inner Peace</span>
+              <p className="text-xs text-gray-600">Sistema Psicológico</p>
             </div>
           </div>
 
           {/* Informações do usuário */}
-          <div className="p-6 border-b border-white/10">
+          <div className="p-4 border-b-2 border-light ">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-gradient-to-br from-light to-accent rounded-full flex items-center justify-center">
                 <User className="w-5 h-5 text-white" />
               </div>
               <div>
-                <p className="text-white font-medium">{user?.name}</p>
-                <p className="text-xs text-white/60 capitalize">{user?.type}</p>
+                <p className="text-light font-medium">{user?.name}</p>
+                <p className="text-xs text-gray-600 capitalize">{user?.type}</p>
               </div>
             </div>
           </div>
@@ -80,8 +80,8 @@ export const Sidebar = () => {
                     to={link.to}
                     className={`flex items-center space-x-3 px-4 py-3 rounded-xl transition-colors ${
                       isActive(link.to)
-                        ? 'bg-light text-white'
-                        : 'text-white/70 hover:text-white hover:bg-white/10'
+                        ? 'bg-accent text-white'
+                        : 'text-black hover:text-light hover:bg-white/10'
                     }`}
                     onClick={() => setIsOpen(false)} // Fecha menu mobile ao clicar
                   >
@@ -97,7 +97,7 @@ export const Sidebar = () => {
           <div className="p-4 border-t border-white/10">
             <button
               onClick={handleLogout}
-              className="flex items-center space-x-3 w-full px-4 py-3 text-white/70 hover:text-white hover:bg-white/10 rounded-xl transition-colors"
+              className="flex items-center space-x-3 w-full px-4 py-3 text-black hover:text-light hover:bg-white/10 rounded-xl transition-colors"
             >
               <LogOut size={20} />
               <span>Sair</span>
